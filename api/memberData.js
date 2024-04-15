@@ -4,7 +4,7 @@ const endpoint = clientCredentials.databaseURL;
 
 // API CALL TO GET ALL TEAM MEMBERS
 const getMembers = (uid) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/members.json?orderBy="uid"&equalTo=${uid}`, {
+  fetch(`${endpoint}/members.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
