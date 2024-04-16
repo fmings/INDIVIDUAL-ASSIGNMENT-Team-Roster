@@ -10,7 +10,6 @@ export default function EditMember() {
 
   useEffect(() => {
     getSingleMember(firebaseKey).then(setEditMember);
-    console.warn(getSingleMember(firebaseKey));
   }, [firebaseKey]);
 
   return (<MemberForm memberObj={editMember} />);
