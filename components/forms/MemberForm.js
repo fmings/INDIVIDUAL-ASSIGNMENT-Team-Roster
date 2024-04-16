@@ -18,7 +18,6 @@ export default function MemberForm({ memberObj }) {
   const { user } = useAuth();
 
   useEffect(() => {
-    console.warn({ memberObj });
     if (memberObj.firebaseKey) {
       setFormInput(memberObj);
     }
