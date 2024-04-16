@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
 import PropTypes from 'prop-types';
+import Link from 'next/link';
 
 export default function MemberCard({ memberObj }) {
   return (
@@ -9,7 +10,9 @@ export default function MemberCard({ memberObj }) {
       <Card.Body>
         <Card.Title>{memberObj.name}</Card.Title>
         <Card.Text>{memberObj.role}</Card.Text>
-        <Button variant="secondary">Edit</Button>
+        <Link href={`/member/edit/${memberObj.firebaseKey}`} passHref>
+          <Button variant="secondary">Edit</Button>
+        </Link>
         <Button variant="danger">Delete</Button>
       </Card.Body>
     </Card>
@@ -21,5 +24,6 @@ MemberCard.propTypes = {
     name: PropTypes.string,
     role: PropTypes.string,
     image: PropTypes.string,
+    firebaseKey: PropTypes.string,
   }).isRequired,
 };

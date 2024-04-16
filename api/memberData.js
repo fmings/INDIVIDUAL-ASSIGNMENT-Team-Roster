@@ -37,7 +37,7 @@ const createMember = (payload) => new Promise((resolve, reject) => {
 
 // API CALL TO CREATE GET SINGLE TEAM MEMBER BY FIREBASEKEY
 const getSingleMember = (firebaseKey) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/authors/${firebaseKey}.json`, {
+  fetch(`${endpoint}/members/${firebaseKey}.json`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
