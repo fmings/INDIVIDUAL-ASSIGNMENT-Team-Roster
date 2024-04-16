@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Button, FloatingLabel, Form } from 'react-bootstrap';
 import { useAuth } from '../../utils/context/authContext';
@@ -9,12 +9,20 @@ const initialState = {
   name: '',
   image: '',
   role: '',
+  firebaseKey: '',
 };
 
 export default function MemberForm({ memberObj }) {
   const [formInput, setFormInput] = useState(initialState);
   const router = useRouter();
   const { user } = useAuth();
+
+  useEffect(() => {
+    console.warn({ memberObj });
+    if (memberObj.firebaseKey) {
+      setFormInput(memberObj);
+    }
+  }, [memberObj, user]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,7 +35,7 @@ export default function MemberForm({ memberObj }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (memberObj.firebaseKey) {
-      updateMember(formInput).then(() => router.push(`/member/${memberObj.firebaseKey}`));
+      updateMember(formInput).then(() => router.push('/team'));
     } else {
       const payload = { ...formInput, uid: user.uid };
       createMember(payload).then(({ name }) => {
@@ -43,7 +51,7 @@ export default function MemberForm({ memberObj }) {
     <Form onSubmit={handleSubmit}>
       <>
         <FloatingLabel
-          controlId="floatingInput"
+          controlId="floatingInput1"
           label="First & Last Name"
           className="mb-3"
         >
@@ -57,7 +65,7 @@ export default function MemberForm({ memberObj }) {
           />
         </FloatingLabel>
         <FloatingLabel
-          controlId="floatingInput"
+          controlId="floatingInput2"
           label="Image URL"
           className="mb-3"
         >
@@ -70,18 +78,20 @@ export default function MemberForm({ memberObj }) {
             required
           />
         </FloatingLabel>
-        <Form.Select
-          aria-label="Role Selector"
-          name="role"
-          onChange={handleChange}
-          value={formInput.role}
-          required
-        >
-          <option>Select Role</option>
-          <option value="Forward">Forward</option>
-          <option value="Defenseman">Defenseman</option>
-          <option value="Goalie">Goalie</option>
-        </Form.Select>
+        <FloatingLabel controlId="floatingSelect" label="Role">
+          <Form.Select
+            aria-label="Role Selector"
+            name="role"
+            onChange={handleChange}
+            value={formInput.role}
+            required
+          >
+            <option value="">Select Role</option>
+            <option key="Forward" value="Forward">Forward</option>
+            <option key="Defenseman" value="Defenseman">Defenseman</option>
+            <option key="Goalie" value="Goalie">Goalie</option>
+          </Form.Select>
+        </FloatingLabel>
       </>
       <Button type="submit">{memberObj.firebaseKey ? 'Update' : 'Create'} Member</Button>
     </Form>
