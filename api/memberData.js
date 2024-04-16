@@ -50,7 +50,7 @@ const getSingleMember = (firebaseKey) => new Promise((resolve, reject) => {
 
 // API CALL TO DELETE TEAM MEMBER
 const deleteSingleMember = (firebaseKey) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/authors/${firebaseKey}.json`, {
+  fetch(`${endpoint}/members/${firebaseKey}.json`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',

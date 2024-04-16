@@ -21,7 +21,7 @@ function ViewTeamCards() {
     <>
       <div className="d-flex flex-wrap">
         {members.map((member) => (
-          <MemberCard memberObj={member} key={member.firebaseKey} />
+          <MemberCard memberObj={member} key={member.firebaseKey} onUpdate={getAllMembers} />
         ))}
       </div>
     </>
