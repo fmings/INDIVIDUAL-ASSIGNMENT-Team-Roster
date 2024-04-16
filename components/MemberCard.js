@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 export default function MemberCard({ memberObj }) {
   return (
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card.Img variant="top" src={memberObj.image} />
       <Card.Body>
         <Card.Title>{memberObj.name}</Card.Title>
         <Card.Text>{memberObj.role}</Card.Text>
