@@ -1,12 +1,15 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import {
   Navbar, Container, Nav, Button,
 } from 'react-bootstrap';
 import { signOut } from '../utils/auth';
+import SearchBar from './SearchBar';
 
 export default function NavBar() {
+  const [, setResults] = useState([]);
+
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
@@ -28,6 +31,7 @@ export default function NavBar() {
             </Link>
             <Button variant="danger" onClick={signOut}>Sign Out</Button>
           </Nav>
+          <SearchBar setResults={setResults} />
         </Navbar.Collapse>
       </Container>
     </Navbar>
