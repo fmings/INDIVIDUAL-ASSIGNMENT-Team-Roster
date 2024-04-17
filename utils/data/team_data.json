@@ -1,0 +1,18 @@
+{
+  "-NvNkVHgo65i6LK789b-":{
+    "firebaseKey":"-NvNkVHgo65i6LK789b-",
+    "logo":"https://upload.wikimedia.org/wikipedia/en/thumb/9/9c/Nashville_Predators_Logo_%282011%29.svg/1200px-Nashville_Predators_Logo_%282011%29.svg.png",
+    "team_name":"Predators",
+    "city": "Nashville",
+    "state": "Tennessee",
+    "uid":"VwEbZZ6VVLQF8Ew2bG2vYBidIc22"
+  },
+  "-NvNkVHintHTfvEgVvTi":{
+    "firebaseKey":"-NvNkVHintHTfvEgVvTi",
+    "logo":"https://upload.wikimedia.org/wikipedia/en/thumb/4/45/Colorado_Avalanche_logo.svg/1200px-Colorado_Avalanche_logo.svg.png",
+    "team_name":"Avalanche",
+    "city": "Denver",
+    "state": "Colorado",
+    "uid":"VwEbZZ6VVLQF8Ew2bG2vYBidIc22"
+  }
+}
