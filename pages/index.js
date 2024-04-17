@@ -20,6 +20,7 @@ function Home() {
 
   return (
     <>
+      <h1>All Members</h1>
       <div className="d-flex flex-wrap">
         {members.map((member) => (
           <MemberCard memberObj={member} key={member.firebaseKey} onUpdate={getAllMembers} />
