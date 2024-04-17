@@ -20,11 +20,17 @@ export default function NavBar() {
             <Link passHref href="/">
               <Nav.Link>Home</Nav.Link>
             </Link>
-            <Link passHref href="/team">
-              <Nav.Link>Team</Nav.Link>
+            <Link passHref href="/teams">
+              <Nav.Link>Teams</Nav.Link>
+            </Link>
+            <Link passHref href="/members">
+              <Nav.Link>Teams</Nav.Link>
+            </Link>
+            <Link passHref href="/team/new">
+              <Nav.Link>New Team</Nav.Link>
             </Link>
             <Link passHref href="/new">
-              <Nav.Link>New</Nav.Link>
+              <Nav.Link>New Member</Nav.Link>
             </Link>
             <Button variant="danger" onClick={signOut}>Sign Out</Button>
           </Nav>
