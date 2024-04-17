@@ -24,7 +24,7 @@ export default function NavBar() {
               <Nav.Link>Teams</Nav.Link>
             </Link>
             <Link passHref href="/members">
-              <Nav.Link>Teams</Nav.Link>
+              <Nav.Link>Members</Nav.Link>
             </Link>
             <Link passHref href="/team/new">
               <Nav.Link>New Team</Nav.Link>
