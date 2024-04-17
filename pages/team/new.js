@@ -1,9 +1,8 @@
 import React from 'react';
+import TeamForm from '../../components/forms/TeamForm';
 
 export default function AddTeam() {
   return (
-    <div>
-      <h1>Add a Team</h1>
-    </div>
+    <><TeamForm /></>
   );
 }
