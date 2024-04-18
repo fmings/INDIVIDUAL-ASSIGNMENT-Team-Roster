@@ -5,6 +5,7 @@
     "team_name":"Predators",
     "city": "Nashville",
     "state": "Tennessee",
+    "public": false,
     "uid":"VwEbZZ6VVLQF8Ew2bG2vYBidIc22"
   },
   "-NvNkVHintHTfvEgVvTi":{
@@ -13,6 +14,7 @@
     "team_name":"Avalanche",
     "city": "Denver",
     "state": "Colorado",
+    "public": true,
     "uid":"VwEbZZ6VVLQF8Ew2bG2vYBidIc22"
   }
 }
