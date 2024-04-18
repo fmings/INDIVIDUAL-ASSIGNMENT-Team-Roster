@@ -3,7 +3,7 @@ import { useAuth } from '../utils/context/authContext';
 import TeamCard from '../components/TeamCard';
 import { getTeams } from '../api/teamData';
 
-export default function Home() {
+export default function Teams() {
   const [teams, setTeams] = useState([]);
 
   const { user } = useAuth();

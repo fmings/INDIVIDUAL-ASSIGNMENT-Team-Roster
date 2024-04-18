@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { Button, FloatingLabel, Form } from 'react-bootstrap';
 import { useAuth } from '../../utils/context/authContext';
 import { createMember, updateMember } from '../../api/memberData';
+import { getTeams } from '../../api/teamData';
 
 const initialState = {
   name: '',
@@ -14,10 +15,13 @@ const initialState = {
 
 export default function MemberForm({ memberObj }) {
   const [formInput, setFormInput] = useState(initialState);
+  const [teams, setTeams] = useState([]);
   const router = useRouter();
   const { user } = useAuth();
 
   useEffect(() => {
+    getTeams(user.uid).then(setTeams);
+
     if (memberObj.firebaseKey) {
       setFormInput(memberObj);
     }
@@ -34,13 +38,13 @@ export default function MemberForm({ memberObj }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (memberObj.firebaseKey) {
-      updateMember(formInput).then(() => router.push('/'));
+      updateMember(formInput).then(() => router.push('/members'));
     } else {
       const payload = { ...formInput, uid: user.uid };
       createMember(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
         updateMember(patchPayload).then(() => {
-          router.push('/');
+          router.push('/members');
         });
       });
     }
@@ -91,6 +95,27 @@ export default function MemberForm({ memberObj }) {
             <option key="Goalie" value="Goalie">Goalie</option>
           </Form.Select>
         </FloatingLabel>
+        <FloatingLabel controlId="floatingSelect2" label="Team">
+          <Form.Select
+            aria-label="Team Selector"
+            name="team_id"
+            onChange={handleChange}
+            value={memberObj.team_id}
+            required
+          >
+            <option value="">Select Team</option>
+            {
+              teams.map((team) => (
+                <option
+                  key={team.firebaseKey}
+                  value={team.firebaseKey}
+                >
+                  {team.team_name}
+                </option>
+              ))
+            }
+          </Form.Select>
+        </FloatingLabel>
       </>
       <Button type="submit">{memberObj.firebaseKey ? 'Update' : 'Create'} Member</Button>
     </Form>
@@ -102,6 +127,7 @@ MemberForm.propTypes = {
     name: PropTypes.string,
     image: PropTypes.string,
     role: PropTypes.string,
+    team_id: PropTypes.string,
     firebaseKey: PropTypes.string,
   }),
 };
