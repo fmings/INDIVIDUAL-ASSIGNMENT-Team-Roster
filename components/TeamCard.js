@@ -17,7 +17,7 @@ export default function TeamCard({ teamObj, onUpdate }) {
       <Card.Body>
         <Card.Title>{teamObj.team_name}</Card.Title>
         <Card.Text>{teamObj.city}, {teamObj.state}</Card.Text>
-        <Link href={`/team/edit/${teamObj.firebaseKey}`} passHref>
+        <Link href={`/team/${teamObj.firebaseKey}`} passHref>
           <Button variant="primary">View</Button>
         </Link>
         <Link href={`/team/edit/${teamObj.firebaseKey}`} passHref>

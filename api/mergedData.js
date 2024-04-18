@@ -1,5 +1,5 @@
 import { deleteSingleMember } from './memberData';
-import { deleteSingleTeam, getTeamsMembers } from './teamData';
+import { deleteSingleTeam, getSingleTeam, getTeamsMembers } from './teamData';
 
 const deleteTeamsAndMembers = (teamId) => new Promise((resolve, reject) => {
   getTeamsMembers(teamId).then((membersArray) => {
@@ -11,4 +11,10 @@ const deleteTeamsAndMembers = (teamId) => new Promise((resolve, reject) => {
   }).catch((error) => reject(error));
 });
 
-export default deleteTeamsAndMembers;
+const viewTeamDetails = (teamFirebaseKey) => new Promise((resolve, reject) => {
+  Promise.all([getSingleTeam(teamFirebaseKey), getTeamsMembers(teamFirebaseKey)]).then(([teamObject, teamMembersArray]) => {
+    resolve({ ...teamObject, members: teamMembersArray });
+  }).catch((error) => reject(error));
+});
+
+export { deleteTeamsAndMembers, viewTeamDetails };
