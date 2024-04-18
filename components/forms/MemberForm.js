@@ -100,7 +100,7 @@ export default function MemberForm({ memberObj }) {
             aria-label="Team Selector"
             name="team_id"
             onChange={handleChange}
-            value={memberObj.team_id}
+            value={formInput.team_id}
             required
           >
             <option value="">Select Team</option>

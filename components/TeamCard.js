@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, Card } from 'react-bootstrap';
-import deleteTeamsAndMembers from '../api/mergedData';
+import { deleteTeamsAndMembers } from '../api/mergedData';
 
 export default function TeamCard({ teamObj, onUpdate }) {
   const deleteThisTeam = () => {
