@@ -109,7 +109,7 @@ export default function TeamForm({ teamObj }) {
           </FloatingLabel>
 
         </>
-        <Button type="submit">{teamObj.firebaseKey ? 'Update' : 'Create'} Team</Button>
+        <Button variant="dark" type="submit">{teamObj.firebaseKey ? 'Update' : 'Create'} Team</Button>
       </Form>
     </div>
   );

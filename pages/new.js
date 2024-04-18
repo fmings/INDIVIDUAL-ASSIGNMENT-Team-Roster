@@ -2,7 +2,10 @@ import MemberForm from '../components/forms/MemberForm';
 
 function AddMember() {
   return (
-    <><MemberForm /></>
+    <>
+      <h1>Add a New Member</h1>
+      <MemberForm />
+    </>
   );
 }
 

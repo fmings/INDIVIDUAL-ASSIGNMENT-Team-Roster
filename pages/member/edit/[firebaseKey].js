@@ -12,5 +12,10 @@ export default function EditMember() {
     getSingleMember(firebaseKey).then(setEditMember);
   }, [firebaseKey]);
 
-  return (<MemberForm memberObj={editMember} />);
+  return (
+    <>
+      <h1>Edit Team Member</h1>
+      <MemberForm memberObj={editMember} />
+    </>
+  );
 }

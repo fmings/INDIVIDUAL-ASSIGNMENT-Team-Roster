@@ -22,18 +22,18 @@ export default function MemberCard({ memberObj, onUpdate }) {
   };
 
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={memberObj.image} />
+    <Card className="object-card" style={{ width: '18rem' }}>
+      <Card.Img className="member-card-image" variant="top" src={memberObj.image} />
       <Card.Body>
-        <Card.Title>{memberObj.name}</Card.Title>
+        <Card.Title className="bold">{memberObj.name}</Card.Title>
         {teams.map((team) => (
           <Card.Title>{memberObj.team_id === team.firebaseKey ? team.team_name : ''}</Card.Title>
         ))}
         <Card.Text>{memberObj.role}</Card.Text>
         <Link href={`/member/edit/${memberObj.firebaseKey}`} passHref>
-          <Button variant="secondary">Edit</Button>
+          <Button className="button" variant="secondary">Edit</Button>
         </Link>
-        <Button variant="danger" onClick={deleteThisMember}>Delete</Button>
+        <Button className="button" variant="danger" onClick={deleteThisMember}>Delete</Button>
       </Card.Body>
     </Card>
   );

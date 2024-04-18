@@ -15,16 +15,15 @@ export default function ViewTeam() {
   return (
     <>
       <div className="mt-5 d-flex flex-wrap">
-        <div className="d-flex flex-column">
-          <img src={teamDetails.logo} alt={teamDetails.team_name} style={{ width: '300px' }} />
-        </div>
-        <div className="text-white ms-5 details">
-          {teamDetails.team_name}
+        <img src={teamDetails.logo} alt={teamDetails.team_name} style={{ width: '100px' }} />
+        <div className="ms-5 details">
+          <h1 className="details-name">{teamDetails.team_name}</h1>
+          <p>{teamDetails.city}, {teamDetails.state}</p>
         </div>
       </div>
-      <div className="text-white ms-5 details">
-        <h2>Team Members</h2>
-        <div className="mt-5 d-flex flex-wrap">
+      <div className="ms-5 details">
+        <h3>Team Members</h3>
+        <div className="d-flex flex-wrap">
           {teamDetails.members?.map((member) => (
             <MemberCard memberObj={member} key={member.firebaseKey} />
           ))}
