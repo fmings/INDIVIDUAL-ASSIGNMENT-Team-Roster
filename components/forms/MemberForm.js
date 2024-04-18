@@ -81,7 +81,7 @@ export default function MemberForm({ memberObj }) {
             required
           />
         </FloatingLabel>
-        <FloatingLabel controlId="floatingSelect" label="Role">
+        <FloatingLabel className="form-field" controlId="floatingSelect" label="Role">
           <Form.Select
             aria-label="Role Selector"
             name="role"
@@ -95,12 +95,12 @@ export default function MemberForm({ memberObj }) {
             <option key="Goalie" value="Goalie">Goalie</option>
           </Form.Select>
         </FloatingLabel>
-        <FloatingLabel controlId="floatingSelect2" label="Team">
+        <FloatingLabel className="form-field" controlId="floatingSelect2" label="Team">
           <Form.Select
             aria-label="Team Selector"
             name="team_id"
             onChange={handleChange}
-            value={memberObj.team_id}
+            value={formInput.team_id}
             required
           >
             <option value="">Select Team</option>
@@ -117,7 +117,7 @@ export default function MemberForm({ memberObj }) {
           </Form.Select>
         </FloatingLabel>
       </>
-      <Button type="submit">{memberObj.firebaseKey ? 'Update' : 'Create'} Member</Button>
+      <Button variant="dark" type="submit">{memberObj.firebaseKey ? 'Update' : 'Create'} Member</Button>
     </Form>
   );
 }

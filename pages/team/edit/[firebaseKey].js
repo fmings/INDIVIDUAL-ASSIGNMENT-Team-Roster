@@ -12,5 +12,10 @@ export default function EditTeam() {
     getSingleTeam(firebaseKey).then(setEditTeam);
   }, [firebaseKey]);
 
-  return (<TeamForm teamObj={editTeam} />);
+  return (
+    <>
+      <h1>Edit Team Information</h1>
+      <TeamForm teamObj={editTeam} />
+    </>
+  );
 }

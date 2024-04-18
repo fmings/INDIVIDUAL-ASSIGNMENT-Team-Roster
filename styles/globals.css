@@ -18,5 +18,37 @@ a {
 }
 
 body {
-  background-color: #88effd;
+  background-color: #d7cdcd;
+}
+
+.object-card {
+  margin: 7px;
+}
+
+.card-image {
+  height: 200px;
+  padding: 20px;
+}
+
+.button {
+  margin: 10px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.bold {
+  font-weight: bolder;
+}
+
+.form-field {
+  padding-bottom: 18px;
+}
+
+h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-decoration: underline;
 }
