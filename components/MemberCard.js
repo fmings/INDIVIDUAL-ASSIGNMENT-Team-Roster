@@ -50,5 +50,6 @@ MemberCard.propTypes = {
   onUpdate: PropTypes.func.isRequired,
   teamObj: PropTypes.shape({
     team_name: PropTypes.string,
+    firebaseKey: PropTypes.string,
   }).isRequired,
 };
