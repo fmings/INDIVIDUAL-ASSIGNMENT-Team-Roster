@@ -158,5 +158,37 @@
     "role":"Defenseman",
     "team_id": "-NvNkVHgo65i6LK789b-",
     "uid":"VwEbZZ6VVLQF8Ew2bG2vYBidIc22"
+  },
+  "-Nvm3a37mz8dpNR3dE8X":{
+    "firebaseKey":"-Nvm3a37mz8dpNR3dE8X",
+    "image":"https://assets.nhle.com/mugs/nhl/20232024/COL/8471699.png",
+    "name":"Andrew Cogliano",
+    "role":"Forward",
+    "team_id": "-NvNkVHintHTfvEgVvTi",
+    "uid":"VwEbZZ6VVLQF8Ew2bG2vYBidIc22"
+  },
+  "-Nvm3iArOOJCLljvW1bq":{
+    "firebaseKey":"-Nvm3iArOOJCLljvW1bq",
+    "image":"https://assets.nhle.com/mugs/nhl/20232024/COL/8479525.png",
+    "name":"Ross Colton",
+    "role":"Forward",
+    "team_id": "-NvNkVHintHTfvEgVvTi",
+    "uid":"VwEbZZ6VVLQF8Ew2bG2vYBidIc22"
+  },
+  "-Nvm3qN3HhCKa3cDzELU":{
+    "firebaseKey":"-Nvm3qN3HhCKa3cDzELU",
+    "image":"https://assets.nhle.com/mugs/nhl/20232024/COL/8481020.png",
+    "name":"Justus Annunen",
+    "role":"Goalie",
+    "team_id": "-NvNkVHintHTfvEgVvTi",
+    "uid":"VwEbZZ6VVLQF8Ew2bG2vYBidIc22"
+  },
+  "-Nvm3wJJ9mnVQFkVJ6Iw":{
+    "firebaseKey":"-Nvm3wJJ9mnVQFkVJ6Iw",
+    "image":"https://assets.nhle.com/mugs/nhl/20232024/COL/8480382.png",
+    "name":"Alexandar Georgiev",
+    "role":"Goalie",
+    "team_id": "-NvNkVHintHTfvEgVvTi",
+    "uid":"VwEbZZ6VVLQF8Ew2bG2vYBidIc22"
   }
 }
