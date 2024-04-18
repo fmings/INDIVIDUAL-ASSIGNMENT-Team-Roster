@@ -107,6 +107,20 @@ export default function TeamForm({ teamObj }) {
               required
             />
           </FloatingLabel>
+          <Form.Check
+            className="text-black mb-3"
+            type="switch"
+            id="public"
+            name="public"
+            label="Public?"
+            checked={formInput.public}
+            onChange={(e) => {
+              setFormInput((prevState) => ({
+                ...prevState,
+                public: e.target.checked,
+              }));
+            }}
+          />
 
         </>
         <Button variant="dark" type="submit">{teamObj.firebaseKey ? 'Update' : 'Create'} Team</Button>
