@@ -4,8 +4,11 @@ import PropTypes from 'prop-types';
 import { Button, Card } from 'react-bootstrap';
 import { deleteTeamsAndMembers } from '../api/mergedData';
 import { updateTeam } from '../api/teamData';
+import { useAuth } from '../utils/context/authContext';
 
 export default function TeamCard({ teamObj, onUpdate }) {
+  const { user } = useAuth();
+
   const togglePublic = () => {
     if (teamObj.public) {
       updateTeam({ ...teamObj, public: false }).then(() => onUpdate());
@@ -30,10 +33,16 @@ export default function TeamCard({ teamObj, onUpdate }) {
         <Link href={`/team/${teamObj.firebaseKey}`} passHref>
           <Button variant="dark">View</Button>
         </Link>
-        <Link href={`/team/edit/${teamObj.firebaseKey}`} passHref>
-          <Button className="button" variant="secondary">Edit</Button>
-        </Link>
-        <Button className="button" variant="danger" onClick={deleteThisTeam}>Delete</Button>
+        {teamObj.uid === user.uid
+          ? (
+            <>
+              <Link href={`/team/edit/${teamObj.firebaseKey}`} passHref>
+                <Button className="button" variant="secondary">Edit</Button>
+              </Link>
+              <Button className="button" variant="danger" onClick={deleteThisTeam}>Delete</Button>
+            </>
+          )
+          : '' }
       </Card.Body>
     </Card>
   );
@@ -47,6 +56,7 @@ TeamCard.propTypes = {
     city: PropTypes.string,
     state: PropTypes.string,
     public: PropTypes.bool,
+    uid: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
 };
