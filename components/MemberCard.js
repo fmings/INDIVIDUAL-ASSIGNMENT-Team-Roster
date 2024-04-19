@@ -30,10 +30,16 @@ export default function MemberCard({ memberObj, onUpdate }) {
           <Card.Title>{memberObj.team_id === team.firebaseKey ? team.team_name : ''}</Card.Title>
         ))}
         <Card.Text>{memberObj.role}</Card.Text>
-        <Link href={`/member/edit/${memberObj.firebaseKey}`} passHref>
-          <Button className="button" variant="secondary">Edit</Button>
-        </Link>
-        <Button className="button" variant="danger" onClick={deleteThisMember}>Delete</Button>
+        {memberObj.uid === user.uid
+          ? (
+            <>
+              <Link href={`/member/edit/${memberObj.firebaseKey}`} passHref>
+                <Button className="button" variant="secondary">Edit</Button>
+              </Link>
+              <Button className="button" variant="danger" onClick={deleteThisMember}>Delete</Button>
+            </>
+          )
+          : ''}
       </Card.Body>
     </Card>
   );
@@ -46,6 +52,7 @@ MemberCard.propTypes = {
     image: PropTypes.string,
     team_id: PropTypes.string,
     firebaseKey: PropTypes.string,
+    uid: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
   teamObj: PropTypes.shape({

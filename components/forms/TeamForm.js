@@ -37,7 +37,9 @@ export default function TeamForm({ teamObj }) {
     if (teamObj.firebaseKey) {
       updateTeam(formInput).then(() => router.push('/teams'));
     } else {
-      const payload = { ...formInput, uid: user.uid };
+      const payload = {
+        ...formInput, uid: user.uid, creator: user.displayName, creatorEmail: user.email,
+      };
       createTeam(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
         updateTeam(patchPayload).then(() => {
@@ -107,6 +109,20 @@ export default function TeamForm({ teamObj }) {
               required
             />
           </FloatingLabel>
+          <Form.Check
+            className="text-black mb-3"
+            type="switch"
+            id="public"
+            name="public"
+            label="Public?"
+            checked={formInput.public}
+            onChange={(e) => {
+              setFormInput((prevState) => ({
+                ...prevState,
+                public: e.target.checked,
+              }));
+            }}
+          />
 
         </>
         <Button variant="dark" type="submit">{teamObj.firebaseKey ? 'Update' : 'Create'} Team</Button>

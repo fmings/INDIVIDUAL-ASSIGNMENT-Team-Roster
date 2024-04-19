@@ -19,6 +19,9 @@ export default function ViewTeam() {
         <div className="ms-5 details">
           <h1 className="details-name">{teamDetails.team_name}</h1>
           <p>{teamDetails.city}, {teamDetails.state}</p>
+          {teamDetails.public
+            ? <><p>Created By: {teamDetails.creator}</p><p>Creator Email: {teamDetails.creatorEmail}</p></>
+            : ''}
         </div>
       </div>
       <div className="ms-5 details">
