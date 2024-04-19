@@ -8,9 +8,9 @@ import { updateTeam } from '../api/teamData';
 export default function TeamCard({ teamObj, onUpdate }) {
   const togglePublic = () => {
     if (teamObj.public) {
-      updateTeam({ ...teamObj, public: false }).then(onUpdate);
+      updateTeam({ ...teamObj, public: false }).then(() => onUpdate());
     } else {
-      updateTeam({ ...teamObj, public: true }).then(onUpdate);
+      updateTeam({ ...teamObj, public: true }).then(() => onUpdate());
     }
   };
 
