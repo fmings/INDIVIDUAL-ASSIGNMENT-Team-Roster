@@ -16,5 +16,24 @@
     "state": "Colorado",
     "public": true,
     "uid":"VwEbZZ6VVLQF8Ew2bG2vYBidIc22"
+  },
+  "-NvnAniIY1HsJcWPx-3N":{
+    "firebaseKey":"-NvnAniIY1HsJcWPx-3N",
+    "logo":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Washington_Capitals.svg/1200px-Washington_Capitals.svg.png",
+    "team_name":"Capitals",
+    "city": "Washington D.C.",
+    "state": ".",
+    "public": true,
+    "uid":"cpdFyWgMtyZIVtoXKwVL9rbSEi42"
+  }
+  ,
+  "-NvnAniIY1HsJcWPx-2Y":{
+    "firebaseKey":"-NvnAniIY1HsJcWPx-2Y",
+    "logo":"https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/Detroit_Red_Wings_logo.svg/1200px-Detroit_Red_Wings_logo.svg.png",
+    "team_name":"Red wings",
+    "city": "Detroit",
+    "state": "Michigan",
+    "public": false,
+    "uid":"cpdFyWgMtyZIVtoXKwVL9rbSEi42"
   }
 }

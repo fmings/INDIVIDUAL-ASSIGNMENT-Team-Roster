@@ -190,5 +190,21 @@
     "role":"Goalie",
     "team_id": "-NvNkVHintHTfvEgVvTi",
     "uid":"VwEbZZ6VVLQF8Ew2bG2vYBidIc22"
+  },
+  "-Nvnku7sFZ9dSR0agx1G":{
+    "firebaseKey":"-Nvnku7sFZ9dSR0agx1G",
+    "image":"https://assets.nhle.com/mugs/nhl/20232024/WSH/8477979.png",
+    "name":"Nicolas Aube-Kubel",
+    "role":"Forward",
+    "team_id": "-NvnAniIY1HsJcWPx-3N",
+    "uid":"VwEbZZ6VVLQF8Ew2bG2vYBidIc22"
+  },
+  "-Nvnl2BLemasSgsYTgQ_":{
+    "firebaseKey":"-Nvnl2BLemasSgsYTgQ_",
+    "image":"https://assets.nhle.com/mugs/nhl/20232024/WSH/8475343.png",
+    "name":"Nic Dowd",
+    "role":"Forward",
+    "team_id": "-NvnAniIY1HsJcWPx-3N",
+    "uid":"VwEbZZ6VVLQF8Ew2bG2vYBidIc22"
   }
 }
