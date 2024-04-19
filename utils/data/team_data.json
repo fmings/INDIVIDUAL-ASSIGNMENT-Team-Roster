@@ -6,6 +6,8 @@
     "city": "Nashville",
     "state": "Tennessee",
     "public": false,
+    "creator": "Felicia Mings",
+    "creatorEmail": "mingsfelicia@gmail.com",
     "uid":"VwEbZZ6VVLQF8Ew2bG2vYBidIc22"
   },
   "-NvNkVHintHTfvEgVvTi":{
@@ -15,6 +17,8 @@
     "city": "Denver",
     "state": "Colorado",
     "public": true,
+    "creator": "Felicia Mings",
+    "creatorEmail": "mingsfelicia@gmail.com",
     "uid":"VwEbZZ6VVLQF8Ew2bG2vYBidIc22"
   },
   "-NvnAniIY1HsJcWPx-3N":{
@@ -24,6 +28,8 @@
     "city": "Washington D.C.",
     "state": ".",
     "public": true,
+    "creator": "Felicia Mings",
+    "creatorEmail": "felicia.mings13@gmail.com",
     "uid":"cpdFyWgMtyZIVtoXKwVL9rbSEi42"
   }
   ,
@@ -34,6 +40,8 @@
     "city": "Detroit",
     "state": "Michigan",
     "public": false,
+    "creator": "Felicia Mings",
+    "creatorEmail": "felicia.mings13@gmail.com",
     "uid":"cpdFyWgMtyZIVtoXKwVL9rbSEi42"
   }
 }
