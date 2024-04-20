@@ -1,4 +1,4 @@
-# This is the name of my Project  [![Netlify Status](https://api.netlify.com/api/v1/badges/76968a61-3f58-4695-b11d-bdc79949c1b0/deploy-status)](https://app.netlify.com/sites/teamrosterfm/deploys)
+# Go Sports!  [![Netlify Status](https://api.netlify.com/api/v1/badges/76968a61-3f58-4695-b11d-bdc79949c1b0/deploy-status)](https://app.netlify.com/sites/teamrosterfm/deploys)
 
 Go Sports! This is a team tracking application. This app allows users to track teams and managers members within those teams.
 
